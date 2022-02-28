@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 
   &:focus-within {
     outline: solid 1px ${COLORS.primary};
-    outline-offset: 1px;
+    outline-offset: 2px;
   }
 
   &:hover {
@@ -41,7 +41,7 @@ const Input = styled.input`
 
   ::placeholder {
     color: ${COLORS.gray500};
-    font-weight: 100;
+    font-weight: 400;
   }
 
   &:focus {
@@ -49,7 +49,7 @@ const Input = styled.input`
   }
 `;
 
-const styles = {
+const STYLES = {
   large: {
     '--font-size': '18px',
     '--border-width': '2px',
@@ -64,7 +64,7 @@ const styles = {
 
 const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
   return (
-    <Wrapper style={{ '--width': width + 'px', ...styles[size] }}>
+    <Wrapper style={{ '--width': width + 'px', ...STYLES[size] }}>
       <VisuallyHidden>{label}</VisuallyHidden>
       <InputIcon
         id={icon}
